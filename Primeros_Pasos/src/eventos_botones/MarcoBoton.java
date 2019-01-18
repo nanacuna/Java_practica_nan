@@ -1,5 +1,6 @@
-package graficos;
+package eventos_botones;
 import javax.swing.*;
+
 import java.awt.*;
 
 public class MarcoBoton extends JFrame {

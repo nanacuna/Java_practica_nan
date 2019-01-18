@@ -1,4 +1,4 @@
-package graficos;
+package eventos_botones;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
