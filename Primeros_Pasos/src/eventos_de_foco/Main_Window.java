@@ -39,9 +39,6 @@ public class Main_Window extends JFrame implements WindowFocusListener {
 			frame2.setTitle("Marco 2");
 	}
 	public void windowLostFocus (WindowEvent e) {
-		/*if (e.getSource()==frame1)
-			frame1.setTitle("Marco 1");
-		else
-			frame2.setTitle("Marco 2");*/
+		
 	}
 }
