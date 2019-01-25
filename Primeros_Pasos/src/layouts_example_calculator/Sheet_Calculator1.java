@@ -7,12 +7,17 @@ import java.awt.event.ActionListener;
 public class Sheet_Calculator1 extends JPanel {
 	private JButton screen;
 	private boolean first;
-	//Sobreescribo mÈtodo paint
+	ActionListener insert;
+	ActionListener execute;
+	private double result = 0;
+	private String lastOperation;
+	//Sobreescribo m√©todo paint
 	public void paintComponent (Graphics g) {
 		super.paintComponent(g);
 	}
 	//Constructor de la clase
 	public Sheet_Calculator1 (){
+		first = true;
 		setLayout (new BorderLayout ());
 		screen = new JButton ("0");
 		screen.setEnabled(false);
@@ -27,7 +32,7 @@ public class Sheet_Calculator1 extends JPanel {
 		}//FIN DEL PAINT COMPONENT
 		public Sheet_Calculator2 () {
 			setLayout (new GridLayout(4, 4));
-			//Una forma de agregar botones (Es m·s larga)
+			//Una forma de agregar botones (Es m√°s larga)
 			/*JButton uno = new JButton ("1");
 			add (uno);
 			JButton dos = new JButton ("2");
@@ -62,24 +67,26 @@ public class Sheet_Calculator1 extends JPanel {
 			add (div);*/
 			//Instancio una clase del tipo ActionListener y la igualo
 			//a la clase que implementa esa interfaz
-			ActionListener insert = new Event_Calculator();
-			//FORMA UN POCO M¡S SIMPLE DE AGREGAR BOTONES
+			insert = new Event_Calculator();
+			execute = new ActionOrder ();
+			//FORMA UN POCO M√ÅS SIMPLE DE AGREGAR BOTONES
 			Put_Button ("7", insert);
 			Put_Button ("8", insert);
 			Put_Button ("9", insert);
-			//Put_Button ("/");
+			Put_Button ("/", execute);
 			Put_Button ("4", insert);
 			Put_Button ("5", insert);
 			Put_Button ("6", insert);
-			//Put_Button ("-");
+			Put_Button ("-", execute);
 			Put_Button ("1", insert);
 			Put_Button ("2", insert);
 			Put_Button ("3", insert);
-			//Put_Button ("+");
-			//Put_Button ("*");
-			Put_Button ("0", insert);
+			Put_Button ("+", execute);
 			Put_Button (".", insert);
-			//Put_Button ("=");
+			Put_Button ("0", insert);
+			Put_Button ("=", execute);
+			Put_Button ("*", execute);
+			lastOperation = "=";
 		}//FIN DEL CONSTRUCTOR DE SHEET CALCULATOR 2
 		//CLASE PARA AGREGAR LOS EVENTOS DE LOS BOTONES
 		private void Put_Button (String label, ActionListener listener) {
@@ -88,14 +95,41 @@ public class Sheet_Calculator1 extends JPanel {
 			add(button);
 		}// FIN CLASE PUT BUTTON
 	}//FIN SHEET CALCULATOR 2
-	//CLASE PARA AGREGAR LA ACCI”N DE LOS BOTONES
+	//CLASE PARA AGREGAR LA ACCI√ìN DE LOS BOTONES
 	private class Event_Calculator implements ActionListener {
 		public void actionPerformed (ActionEvent e) {
 			String entry = e.getActionCommand();
 			if (first) {
-				screen.set--®2_-.e..e..e..e..e..BOTTOM_ALIGNMENT.-«Ò¥.`.e..e..e..e..e...ÁÁÁÁ..Á.Á..e.lse;
-			}//Fin del if4
-			screen.setText(screen.getText()+entry22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222);
+				screen.setText(" ");
+				first = false;
+			}//Fin del if
+			screen.setText(screen.getText()+entry);
 		}
 	}//FIN CLASE EVENT CALCULATOR
+	private class ActionOrder  implements ActionListener{
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			String operation = e.getActionCommand();
+			calculate (Double.parseDouble(screen.getText()));
+			lastOperation = operation;
+			first = true;
+		}
+		public void calculate (double number) {
+			if (lastOperation.equals("+"))
+				result += number;
+			else if (lastOperation.equals("-"))
+				result -= number;
+			else if (lastOperation.equals("*"))
+				result *= number;
+			else if (lastOperation.equals("/")) {
+				result = number/number;
+				if (number != 0 && number == 0)
+					screen.setText("No se puede dividir por 0");
+				//else
+			}
+			else if (lastOperation.equals("="))
+				result = number;
+			screen.setText(" "+result);
+		}
+	}//FIN ACTION ORDER
 }//FIN SHEET CALCULATOR 1
