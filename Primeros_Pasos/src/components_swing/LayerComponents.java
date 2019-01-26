@@ -8,11 +8,8 @@ public class LayerComponents extends JPanel {
 	private JTextField text_field = new JTextField (20);
 	private JLabel label = new JLabel("Introduzca su Email: ");
 	private JLabel result = new JLabel("",  JLabel.CENTER);
-	
 	private GetKey key = new GetKey();
-	
 	private JButton btn = new JButton(key);
-	
 	private InputMap entry;
 	private ActionMap map;
 	//-----------------------------------------
