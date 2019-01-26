@@ -121,12 +121,8 @@ public class Sheet_Calculator1 extends JPanel {
 				result -= number;
 			else if (lastOperation.equals("*"))
 				result *= number;
-			else if (lastOperation.equals("/")) {
-				result = number/number;
-				if (number != 0 && number == 0)
-					screen.setText("No se puede dividir por 0");
-				//else
-			}
+			else if (lastOperation.equals("/"))
+				result /= number;
 			else if (lastOperation.equals("="))
 				result = number;
 			screen.setText(" "+result);
