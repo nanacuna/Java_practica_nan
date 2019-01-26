@@ -8,12 +8,11 @@ public class LayerComponents extends JPanel {
 	private JTextField text_field = new JTextField (20);
 	private JLabel label = new JLabel("Introduzca su Email: ");
 	private JLabel result = new JLabel("",  JLabel.CENTER);
+	
 	private GetKey key = new GetKey();
+	
 	private JButton btn = new JButton(key);
-	private GetText text = new GetText();
-	private int at;
-	private boolean point;
-	private String mail;
+	
 	private InputMap entry;
 	private ActionMap map;
 	//-----------------------------------------
@@ -29,20 +28,29 @@ public class LayerComponents extends JPanel {
 		layer2.add (text_field);
 		
 		add(result, BorderLayout.CENTER);
-		
-		btn.addActionListener(text);
-		
+
 		layer2.add (btn);
+		
 		//------------------------------------------
-		entry = getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
-		entry.put(KeyStroke.getKeyStroke("ctrl A"), "OK");
+		entry = getInputMap(WHEN_IN_FOCUSED_WINDOW);
+		entry.put(KeyStroke.getKeyStroke("ENTER"), "accion");
 		map = getActionMap();
-		map.put("OK", key);
+		map.put("accion", key);
 	}
-	private class GetText implements ActionListener {
+	
+	private class GetKey extends AbstractAction{
+		private int at = 0;
+		private boolean point;
+		private String mail;
+		
+		public GetKey () {
+			putValue (NAME, "OK");
+			putValue (SHORT_DESCRIPTION, "Presione el botín para ingresar su mail o ENTER");
+		}
+		
 		@Override
-		public void actionPerformed (ActionEvent e) {
-			at = 0;
+		public void actionPerformed(ActionEvent e) {
+			at=0;
 			mail = text_field.getText().trim();
 			for (int i=0; i<mail.length(); i++) {
 				if (mail.charAt(i) == '@')
@@ -57,17 +65,6 @@ public class LayerComponents extends JPanel {
 				result.setText("Email Incorrecto");
 			else
 				result.setText("Email Correcto");
-		}
-	}
-	private class GetKey extends AbstractAction{
-		public GetKey () {
-			putValue (Action.NAME, "OK");
-			putValue (Action.SHORT_DESCRIPTION, "Presione el botï¿½n para ingresar su mail o ENTER");
-			putValue("ENTER", key);
-		}
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			String nom = (String) getValue("ENTER");
 		}
 	}
 }
