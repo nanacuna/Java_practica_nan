@@ -4,49 +4,38 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class LayerComponents extends JPanel {
-	private JPanel layer2;
-	private JTextField field;
-	private JLabel label;
-	private JLabel result;
-	private JButton btn;
-	private GetText text;
+	private JPanel layer2  = new JPanel();
+	private JTextField text_field = new JTextField (20);
+	private JLabel label = new JLabel("Introduzca su Email: ");
+	private JLabel result = new JLabel("",  JLabel.CENTER);
+	private GetKey key = new GetKey();
+	private JButton btn = new JButton(key);
+	private GetText text = new GetText();
 	private int at;
 	private boolean point;
 	private String mail;
 	private InputMap entry;
 	private ActionMap map;
-	private GetKey key;
 	//-----------------------------------------
-	public void paintComponent (Graphics g) {
-		super.paintComponent(g);
-	}
 	public LayerComponents () {
 		setLayout (new BorderLayout());
-		//------------------------------------------
-		layer2  = new JPanel();
+		
 		add(layer2, BorderLayout.NORTH);
 		layer2.setLayout(new FlowLayout());
-		//-----------------------------------------
-		result = new JLabel("",  JLabel.CENTER);
-		result.getForeground().getColorSpace()   ;
-		//------------------------------------------
-		label = new JLabel("Introduzca su Email: ");
-		layer2.add(label);
-		//------------------------------------------
-		field = new JTextField (20);
-		layer2.add (field);
-		//------------------------------------------
+		
+		result.getForeground().getColorSpace();
+				
+		layer2.add(label);		
+		layer2.add (text_field);
+		
 		add(result, BorderLayout.CENTER);
-		//-------------------------------------------
-		key = new GetKey ();
-		//-----------------------------------------
-		btn = new JButton(key);
-		text = new GetText();
+		
 		btn.addActionListener(text);
+		
 		layer2.add (btn);
 		//------------------------------------------
 		entry = getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
-		entry.put(KeyStroke.getKeyStroke("ENTER"), "OK");
+		entry.put(KeyStroke.getKeyStroke("ctrl A"), "OK");
 		map = getActionMap();
 		map.put("OK", key);
 	}
@@ -54,7 +43,7 @@ public class LayerComponents extends JPanel {
 		@Override
 		public void actionPerformed (ActionEvent e) {
 			at = 0;
-			mail = field.getText().trim();
+			mail = text_field.getText().trim();
 			for (int i=0; i<mail.length(); i++) {
 				if (mail.charAt(i) == '@')
 					at++;
@@ -73,7 +62,7 @@ public class LayerComponents extends JPanel {
 	private class GetKey extends AbstractAction{
 		public GetKey () {
 			putValue (Action.NAME, "OK");
-			putValue (Action.SHORT_DESCRIPTION, "Presione el botón para ingresar su mail o ENTER");
+			putValue (Action.SHORT_DESCRIPTION, "Presione el botï¿½n para ingresar su mail o ENTER");
 			putValue("ENTER", key);
 		}
 		@Override
