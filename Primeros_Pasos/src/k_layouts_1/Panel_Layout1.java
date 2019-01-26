@@ -1,4 +1,4 @@
-package layouts;
+package k_layouts_1;
 import javax.swing.*;
 import java.awt.*;
 

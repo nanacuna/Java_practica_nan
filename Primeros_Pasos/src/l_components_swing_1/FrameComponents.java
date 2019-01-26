@@ -1,4 +1,4 @@
-package components_swing;
+package l_components_swing_1;
 import javax.swing.*;
 import java.awt.*;
 

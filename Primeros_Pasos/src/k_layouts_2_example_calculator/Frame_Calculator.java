@@ -1,4 +1,4 @@
-package layouts_example_calculator;
+package k_layouts_2_example_calculator;
 import javax.swing.*;
 import java.awt.*;
 

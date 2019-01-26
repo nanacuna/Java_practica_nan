@@ -43,4 +43,5 @@ public class Multiple_Events extends JPanel {
 			+ "\nDescripción: "+getValue(Action.SHORT_DESCRIPTION));
 		}
 	}
+	///////Falta terminar!!!!!!!!!!!!!!!!!!!!!!!!!
 }

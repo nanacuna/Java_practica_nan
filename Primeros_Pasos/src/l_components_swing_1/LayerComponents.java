@@ -1,4 +1,4 @@
-package components_swing;
+package l_components_swing_1;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -17,9 +17,6 @@ public class LayerComponents extends JPanel {
 	private ActionMap map;
 	private GetKey key;
 	//-----------------------------------------
-	public void paintComponent (Graphics g) {
-		super.paintComponent(g);
-	}
 	public LayerComponents () {
 		setLayout (new BorderLayout());
 		//------------------------------------------
@@ -73,12 +70,19 @@ public class LayerComponents extends JPanel {
 	private class GetKey extends AbstractAction{
 		public GetKey () {
 			putValue (Action.NAME, "OK");
-			putValue (Action.SHORT_DESCRIPTION, "Presione el botón para ingresar su mail o ENTER");
-			putValue("ENTER", key);
+			putValue (Action.SHORT_DESCRIPTION, "Presione el botï¿½n para ingresar su mail o ENTER");
+			putValue("ENTER", entry);
 		}
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			String nom = (String) getValue("ENTER");
+			if (e.getSource()=="ENTER") {
+				result.setText("Email Correcto");
+				System.out.println(result);
+			}
+			else {
+				result.setText("Email Incorrecto");
+				System.out.println(result);
+			}
 		}
 	}
 }

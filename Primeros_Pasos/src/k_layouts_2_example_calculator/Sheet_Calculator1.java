@@ -1,4 +1,4 @@
-package layouts_example_calculator;
+package k_layouts_2_example_calculator;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -69,7 +69,7 @@ public class Sheet_Calculator1 extends JPanel {
 			//a la clase que implementa esa interfaz
 			insert = new Event_Calculator();
 			execute = new ActionOrder ();
-			//FORMA UN POCO M√ÅS SIMPLE DE AGREGAR BOTONES
+			//FORMA UN POCO M√?S SIMPLE DE AGREGAR BOTONES
 			Put_Button ("7", insert);
 			Put_Button ("8", insert);
 			Put_Button ("9", insert);
