@@ -4,42 +4,25 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class LayerComponents extends JPanel {
-	private JPanel layer2;
-	private JTextField field;
-	private JLabel label;
-	private JLabel result;
-	private JButton btn;
-	private GetText text;
-	private int at;
-	private boolean point;
-	private String mail;
+	
+	private JPanel layer2  = new JPanel();
+	private JTextField field = new JTextField (20);
+	private JLabel label_email = new JLabel("Introduzca su Email: ");
+	private JLabel result = new JLabel("",  JLabel.CENTER);
+	private GetKey key = new GetKey ();
+	private JButton btn = new JButton(key);
+	
 	private InputMap entry;
 	private ActionMap map;
-	private GetKey key;
 	//-----------------------------------------
 	public LayerComponents () {
 		setLayout (new BorderLayout());
-		//------------------------------------------
-		layer2  = new JPanel();
 		add(layer2, BorderLayout.NORTH);
 		layer2.setLayout(new FlowLayout());
-		//-----------------------------------------
-		result = new JLabel("",  JLabel.CENTER);
-		result.getForeground().getColorSpace()   ;
-		//------------------------------------------
-		label = new JLabel("Introduzca su Email: ");
-		layer2.add(label);
-		//------------------------------------------
-		field = new JTextField (20);
+		layer2.add(label_email);
 		layer2.add (field);
-		//------------------------------------------
+
 		add(result, BorderLayout.CENTER);
-		//-------------------------------------------
-		key = new GetKey ();
-		//-----------------------------------------
-		btn = new JButton(key);
-		text = new GetText();
-		btn.addActionListener(text);
 		layer2.add (btn);
 		//------------------------------------------
 		entry = getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
@@ -47,9 +30,19 @@ public class LayerComponents extends JPanel {
 		map = getActionMap();
 		map.put("OK", key);
 	}
-	private class GetText implements ActionListener {
+	
+	//Events
+	private class GetKey extends AbstractAction{
+		private int at;
+		private boolean point;
+		private String mail;
+		public GetKey () {
+			putValue (NAME, "OK");
+			putValue (SHORT_DESCRIPTION, "Presione el boton para ingresar su mail o ENTER");
+			
+		}
 		@Override
-		public void actionPerformed (ActionEvent e) {
+		public void actionPerformed(ActionEvent e) {
 			at = 0;
 			mail = field.getText().trim();
 			for (int i=0; i<mail.length(); i++) {
@@ -61,27 +54,13 @@ public class LayerComponents extends JPanel {
 					point = true;
 			}
 			//----------------------------------------------------------------
-			if ( at != 1  || point == false)
+			if ( at != 1  || point == false){
 				result.setText("Email Incorrecto");
-			else
-				result.setText("Email Correcto");
-		}
-	}
-	private class GetKey extends AbstractAction{
-		public GetKey () {
-			putValue (Action.NAME, "OK");
-			putValue (Action.SHORT_DESCRIPTION, "Presione el bot�n para ingresar su mail o ENTER");
-			putValue("ENTER", entry);
-		}
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			if (e.getSource()=="ENTER") {
-				result.setText("Email Correcto");
-				System.out.println(result);
+				result.setForeground(Color.RED);
 			}
-			else {
-				result.setText("Email Incorrecto");
-				System.out.println(result);
+			else{
+				result.setText("Email Correcto");
+				result.setForeground(Color.GREEN);
 			}
 		}
 	}
