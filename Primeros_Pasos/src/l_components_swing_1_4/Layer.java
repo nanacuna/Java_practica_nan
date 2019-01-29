@@ -5,15 +5,15 @@ import javax.swing.text.*;
 import javax.swing.event.*;
 
 public class Layer extends JPanel {
-	Color red = new Color (221, 83, 71);
-	JPanel top_layer = new JPanel();
-	JLabel label_1 = new JLabel("User");
-	JLabel label_2 = new JLabel("Password");
-	JTextField login = new JTextField(10);
-	JPasswordField pass = new JPasswordField(10);
-	JButton submit = new JButton("Submit");
-	CheckPass check_pass = new CheckPass();
-	JLabel information = new JLabel("The password must be between 8 and 12 characters");
+	private Color red = new Color (221, 83, 71);
+	private JPanel top_layer = new JPanel();
+	private JLabel label_1 = new JLabel("User");
+	private JLabel label_2 = new JLabel("Password");
+	private JTextField login = new JTextField(10);
+	private JPasswordField pass = new JPasswordField(10);
+	private JButton submit = new JButton("Submit");
+	private CheckPass check_pass = new CheckPass();
+	private JLabel information = new JLabel("The password must be between 8 and 12 characters");
 	public Layer () {
 		setLayout(new BorderLayout());
 		top_layer.setLayout(new GridLayout(3, 2));
