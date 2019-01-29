@@ -11,7 +11,7 @@ public class Frame extends JFrame{
 		alto = dim.height;
 		setBounds(ancho/4, alto/4, ancho/2, alto/2);
 		//---------------------------------------------------
-		setTitle("");
+		setTitle("JSlider");
 		Image im = resolution.createImage("imagenes/blue.png");
 		setIconImage(im);
 		//---------------------------------------------------
