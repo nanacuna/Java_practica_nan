@@ -1,4 +1,4 @@
-package procesador_de_texto_1_1;
+package a_text_builder_1_1;
 
 public class Main {
 

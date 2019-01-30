@@ -1,4 +1,4 @@
-package z_template;
+package l_components_swing_2_9;
 import javax.swing.*;
 import java.awt.*;
 
@@ -12,7 +12,7 @@ public class Frame extends JFrame{
 		setBounds(ancho/4, alto/4, ancho/2, alto/2);
 		//---------------------------------------------------
 		setTitle("");
-		Image im = resolution.createImage("../Primeros_Pasos/imagenes/blue.png");
+		Image im = resolution.createImage("imagenes/blue.png");
 		setIconImage(im);
 		//---------------------------------------------------
 		Layer layer = new Layer();

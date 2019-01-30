@@ -1,4 +1,4 @@
-package procesador_de_texto_1_1;
+package a_text_builder_1_1;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.text.*;
@@ -62,7 +62,21 @@ public class Layer extends JPanel {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			letters = text.getFont();
-			if (type_menu.equals("Arail") || type_menu.equals("Courier") || type_menu.equals("Verdana)) 
+			if (type_menu.equals("Arial") || type_menu.equals("Courier") || type_menu.equals("Verdana")) {
+				style_text = letters.getStyle();
+				size_text = letters.getSize();
+			}
+			else if (type_menu.equals("Italic") || type_menu.equals("Bold")) {
+				if (letters.getStyle() == 1 || letters.getStyle() == 2) {
+					style_text = 3;
+				}
+				type_text = letters.getFontName();
+				size_text = letters.getSize();
+			}
+			else{
+				type_text = letters.getFontName();
+				style_text = letters.getStyle();
+			}
 			text.setFont(new Font(type_text, style_text, size_text));
 		}
 		

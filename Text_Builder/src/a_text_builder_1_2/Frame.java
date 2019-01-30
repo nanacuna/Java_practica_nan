@@ -1,4 +1,4 @@
-package z_template;
+package a_text_builder_1_2;
 import javax.swing.*;
 import java.awt.*;
 
@@ -11,7 +11,7 @@ public class Frame extends JFrame{
 		alto = dim.height;
 		setBounds(ancho/4, alto/4, ancho/2, alto/2);
 		//---------------------------------------------------
-		setTitle("");
+		setTitle("Procesador de Textos 2");
 		Image im = resolution.createImage("../Primeros_Pasos/imagenes/blue.png");
 		setIconImage(im);
 		//---------------------------------------------------
