@@ -1,4 +1,4 @@
-package poo_nan;
+package a_poo_nan;
 
 public class Auto_nan {
 		

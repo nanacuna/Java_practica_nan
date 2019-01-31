@@ -1,4 +1,4 @@
-package poo;
+package a_poo;
 
 public class Alumno extends Humano {
 	

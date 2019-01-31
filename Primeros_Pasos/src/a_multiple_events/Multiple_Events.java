@@ -1,4 +1,4 @@
-package multiple_events;
+package a_multiple_events;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -14,7 +14,7 @@ public class Multiple_Events extends JPanel {
 		add (new JButton (action_blue));
 		////////////////////////////////////////////////////////////////////////////////////////////////////////
 		///////////////CLASE 1: MAPA DE ENTRADA/////////////////////////////////////
-		InputMap EntryMap = getInputMap (JComponent.WHEN_IN_FOCUSED_WINDOW);
+		InputMap EntryMap = getInputMap (WHEN_IN_FOCUSED_WINDOW);
 		//////////////CLASE 2: COMBINACIÓN DE TECLAS/////////////////////////////////////
 		//KeyStroke KeyRed = KeyStroke.getKeyStroke("ctrl R");
 		/////////////CLASE 3: AGREGA VÍNCULO ENTRE  LA COMMBINACIÓN DE TECLAS Y LA ACCIÓN/////////////////////////////////////

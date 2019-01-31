@@ -1,4 +1,4 @@
-package poo;
+package a_poo;
 import java.awt.Toolkit;
 import java.awt.event.*;
 import java.util.*;

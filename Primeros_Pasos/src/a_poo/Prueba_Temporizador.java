@@ -1,4 +1,4 @@
-package poo;
+package a_poo;
 import javax.swing.*;
 
 public class Prueba_Temporizador {

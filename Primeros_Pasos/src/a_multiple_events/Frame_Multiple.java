@@ -1,4 +1,4 @@
-package multiple_events;
+package a_multiple_events;
 import javax.swing.*;
 import java.awt.*;
 

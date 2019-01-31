@@ -1,6 +1,6 @@
-package poo;
+package a_poo;
 
-import paquete_pruebas.Clase3;
+import a_paquete_pruebas.Clase3;
 
 public class Clase2 {
 

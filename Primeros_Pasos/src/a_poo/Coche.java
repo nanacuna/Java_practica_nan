@@ -1,4 +1,4 @@
-package poo;
+package a_poo;
 
 public class Coche {
 	//Propiedades que no pueden variar

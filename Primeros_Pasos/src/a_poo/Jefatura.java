@@ -1,4 +1,4 @@
-package poo;
+package a_poo;
 
 class Jefatura extends Empleado implements Jefes{
 	
