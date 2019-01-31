@@ -21,6 +21,9 @@ public class Layer extends JPanel {
 			private JRadioButtonMenuItem size_3 = new JRadioButtonMenuItem("20");
 			private JRadioButtonMenuItem size_4 = new JRadioButtonMenuItem("24");
 	//-----------------------------------------------
+	private JPopupMenu options = new JPopupMenu();
+	private JMenuItem bold_emergent = new JMenuItem("Negrita");
+	private JMenuItem italic_emergent = new JMenuItem("Italic");
 	private JTextPane text = new JTextPane();
 	private Font letters;
 	public Layer () {
@@ -57,6 +60,11 @@ public class Layer extends JPanel {
 		add(layer_menu, BorderLayout.NORTH);
 		add(text, BorderLayout.CENTER);
 		//------------------------------------
+		options.add(bold_emergent);
+		options.add(italic_emergent);
+		bold_emergent.addActionListener(new StyledEditorKit.BoldAction());
+		italic_emergent.addActionListener(new StyledEditorKit.ItalicAction());
+		text.setComponentPopupMenu(options);
 	}
 	public void elements_menu(String label, String menu, String type_letter, String icono){
 		JMenuItem source_menu = new JMenuItem(label, new ImageIcon(icono));

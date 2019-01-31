@@ -7,9 +7,10 @@ public class Frame extends JFrame {
 	private JPanel layer = new JPanel();
 	private JMenu my_menu = new JMenu("Color");
 	private JMenuBar menu_bar = new JMenuBar();
-	private Color_Action action_red = new Color_Action("Red", new ImageIcon("../Primeros_Pasos/imagenes/red.png"), new Color(221, 79, 67));
-	private Action action_green = new Color_Action("Green", new ImageIcon("../Primeros_Pasos/imagenes/green.png"), new Color(23, 160, 93));
-	private Action action_blue = new Color_Action("Blue", new ImageIcon("../Primeros_Pasos/imagenes/blue.png"), new Color(75, 139, 244));
+	private ColorAction action_red = new ColorAction("Red", new ImageIcon("../Primeros_Pasos/imagenes/red.png"), new Color(221, 79, 67));
+	private ColorAction action_green = new ColorAction("Green", new ImageIcon("../Primeros_Pasos/imagenes/green.png"), new Color(23, 160, 93));
+	private ColorAction action_blue = new ColorAction("Blue", new ImageIcon("../Primeros_Pasos/imagenes/blue.png"), new Color(75, 139, 244));
+	private JToolBar tool_bar = new JToolBar();
 	public Frame () {
 		Toolkit resolucion = Toolkit.getDefaultToolkit();
 		Dimension dim = resolucion.getScreenSize();
@@ -21,14 +22,14 @@ public class Frame extends JFrame {
 		add (layer);
 		//---------------------------------------------------------------------------------------------------------------------------------------
 		//---------------------------------------------------------------------------------------------------------------------------------------
-		/*InputMap EntryMap = getInputMap (JComponent.WHEN_IN_FOCUSED_WINDOW);
-		EntryMap.put(KeyStroke.getKeyStroke("ctrl R"), "Background Red");
-		EntryMap.put(KeyStroke.getKeyStroke("ctrl G"), "Background Green");
-		EntryMap.put(KeyStroke.getKeyStroke("ctrl B"), "Background Blue");
-		ActionMap  Map = getActionMap();
-		Map.put("Background Red", action_red);
-		Map.put("Background Green", action_green);
-		Map.put("Background Blue", action_blue);*/
+		InputMap entryMap = layer.getInputMap (JPanel.WHEN_IN_FOCUSED_WINDOW);
+		entryMap.put(KeyStroke.getKeyStroke("ctrl R"), "Background Red");
+		entryMap.put(KeyStroke.getKeyStroke("ctrl G"), "Background Green");
+		entryMap.put(KeyStroke.getKeyStroke("ctrl B"), "Background Blue");
+		ActionMap  map = layer.getActionMap();
+		map.put("Background Red", action_red);
+		map.put("Background Green", action_green);
+		map.put("Background Blue", action_blue);
 		//---------------------------------------------------------------------------------------------------------------------------------------
 		my_menu.add(action_red);
 		my_menu.add(action_green);
@@ -36,10 +37,18 @@ public class Frame extends JFrame {
 		//---------------------------------------------------------------------------------------------------------------------------------------
 		menu_bar.add(my_menu);
 		setJMenuBar(menu_bar);
+		//---------------------------------------------------------------------------------------------------------------------------------------
+		tool_bar.add(action_red);
+		tool_bar.add(action_green);
+		tool_bar.add(action_blue);
+		tool_bar.addSeparator();
+		tool_bar.add(new CloseWindow());
+		add(tool_bar, BorderLayout.NORTH);
+		
 	}
 ////////////Clase Interna////////////////////////////////////////
-	private class Color_Action extends AbstractAction {
-		public Color_Action (String nombre, Icon icono, Color color) {
+	private class ColorAction extends AbstractAction {
+		public ColorAction (String nombre, Icon icono, Color color) {
 			putValue (Action.NAME, nombre);
 			putValue (Action.SMALL_ICON, icono);
 			putValue (Action.SHORT_DESCRIPTION, "Puts the color sheet "+nombre);
@@ -47,7 +56,17 @@ public class Frame extends JFrame {
 		}
 		public void actionPerformed(ActionEvent e){
 			Color c = (Color) getValue("Background_color ");
-			setBackground (c);
+			layer.setBackground (c);
+		}
+	}
+	private class CloseWindow extends AbstractAction{
+		CloseWindow(){
+			putValue(SHORT_DESCRIPTION, "Cerrar Ventana");
+			putValue(SMALL_ICON, new ImageIcon("assets/theme/close.png"));
+		}
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			System.exit(0);
 		}
 	}
 }
