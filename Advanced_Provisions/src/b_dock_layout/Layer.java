@@ -1,9 +1,6 @@
 package b_dock_layout;
-import java.awt.*;
 import javax.swing.*;
-import javax.swing.text.*;
-import javax.swing.event.*;
-import java.awt.event.*;
+
 public class Layer extends JPanel {
 	private JButton btn_1 = new JButton("Button 1");
 	private JButton btn_2 = new JButton("Button 2");

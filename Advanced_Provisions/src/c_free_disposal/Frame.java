@@ -9,7 +9,7 @@ public class Frame extends JFrame{
 		int ancho, alto;
 		ancho = dim.width;
 		alto = dim.height;
-		setBounds(ancho/4, alto/4, ancho/2, alto/2);
+		setBounds(ancho/4, alto/4, ancho/3, alto/3);
 		//---------------------------------------------------
 		setTitle("Free Disposal");
 		Image im = resolution.createImage("../Primeros_Pasos/imagenes/blue.png");
