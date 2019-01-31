@@ -14,6 +14,7 @@ public class Layer extends JPanel {
 	private Color blue = new Color(139, 183, 240);
 	private Color yellow = new Color(255, 238, 163);
 	
+	
 	private JPanel layer_menu = new JPanel();
 	private JMenuBar menu_bar = new JMenuBar();
 		private JMenu menu_font = new JMenu("Fonts");
@@ -101,10 +102,6 @@ public class Layer extends JPanel {
 			putValue(SMALL_ICON, new ImageIcon ("assets/theme/bold.png"));
 		}
 		
-		public void actionPerformed(ActionEvent e) {
-			
-			System.out.println("Gato");
-		}
 	}
 	private class Italic extends StyledEditorKit.ItalicAction{
 		public Italic() {			
