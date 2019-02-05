@@ -10,7 +10,7 @@ public class Menu extends JFrame {
 		ancho = mi_dim.width;
 		alto = mi_dim.height;
 		setBounds (ancho/4, alto/4, ancho/2, alto/2);
-		setTitle ("Menú");
+		setTitle ("MenÃº");
 		Image button = resolucion.createImage("src/ventana_nan/copia.jpg");
 		setIconImage (button);
 		

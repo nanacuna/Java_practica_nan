@@ -69,7 +69,7 @@ public class Sheet_Calculator1 extends JPanel {
 			//a la clase que implementa esa interfaz
 			insert = new Event_Calculator();
 			execute = new ActionOrder ();
-			//FORMA UN POCO MÃ?S SIMPLE DE AGREGAR BOTONES
+			//FORMA UN POCO Mï¿½?S SIMPLE DE AGREGAR BOTONES
 			Put_Button ("7", insert);
 			Put_Button ("8", insert);
 			Put_Button ("9", insert);

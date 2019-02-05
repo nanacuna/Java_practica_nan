@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class Frame_Emergent extends  JFrame {
-	//Declaro un variable  estática para incrementar el número de ventanas
+	//Declaro un variable  estï¿½tica para incrementar el nï¿½mero de ventanas
 	private  static int i=0;
 	//Constructor de la clase
 	public Frame_Emergent (JButton button_sheet_listener) {
@@ -11,12 +11,12 @@ public class Frame_Emergent extends  JFrame {
 		i++;
 		//Le doy titulo a las ventanas
 		setTitle ("Ventana "+i);
-		//Le doy tamaño a  las  ventanas
+		//Le doy tamaï¿½o a  las  ventanas
 		setBounds (40*i, 40*i, 800, 450);
 		//INSTANCIO LA CLASE INTERNA
 		Close_All close = new Close_All ();
-		//Hago que el botón recibido como parámetro desencade
-		//la acción de la clase intern  ´` ¡ 
+		//Hago que el botÃ³n recibido como parÃ¡metro desencadene
+		//la acciÃ³n de la clase interna 
 		  
 		
 		

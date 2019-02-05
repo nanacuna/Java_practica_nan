@@ -3,7 +3,7 @@ public class Manipular_Cadenas {
 
 	public static void main(String[] args) {
 		
-		String nom= "Nancy Beatriz Acuña";
+		String nom= "Nancy Beatriz AcuÃ±a";
 		
 		System.out.println("Mi nombre es "+nom);
 		
@@ -13,7 +13,7 @@ public class Manipular_Cadenas {
 		
 		int ultima_letra=nom.length();
 		
-		System.out.println("La última letra es la "+nom.charAt(ultima_letra-1));
+		System.out.println("La Ãºltima letra es la "+nom.charAt(ultima_letra-1));
 		
 		
 	}

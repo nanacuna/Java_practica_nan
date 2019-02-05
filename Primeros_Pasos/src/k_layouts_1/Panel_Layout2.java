@@ -7,7 +7,7 @@ public class Panel_Layout2 extends JPanel {
 		super.paintComponent(g);
 	}
 	public Panel_Layout2 () {
-		//Doy posición a los botones
+		//Doy posiciÃ³n a los botones
 		setLayout (new BorderLayout ());
 		add (new JButton ("Red"), BorderLayout.WEST);
 		add (new JButton ("Green"), BorderLayout.EAST);

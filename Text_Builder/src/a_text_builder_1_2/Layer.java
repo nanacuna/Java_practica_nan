@@ -60,7 +60,7 @@ public class Layer extends JPanel {
 		}
 		else {
 			size.add(source_menu);
-			source_menu.addActionListener(new StyledEditorKit.FontSizeAction("Cambiar tamño de letra", size_1));
+			source_menu.addActionListener(new StyledEditorKit.FontSizeAction("Cambiar tamaÃ±o de letra", size_1));
 		}
 	}
 }

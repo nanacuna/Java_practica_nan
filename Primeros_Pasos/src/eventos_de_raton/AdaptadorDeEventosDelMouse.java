@@ -9,10 +9,10 @@ public class AdaptadorDeEventosDelMouse extends MouseAdapter {
 	}
 	public void mousePressed (MouseEvent e) {
 		if (e.getModifiersEx()==MouseEvent.BUTTON1_DOWN_MASK)
-			System.out.println("Haz pulsado el botón izquierdo del mouse");
+			System.out.println("Haz pulsado el botÃ³n izquierdo del mouse");
 		else if (e.getModifiersEx()==MouseEvent.BUTTON2_DOWN_MASK)
 			System.out.println("Haz pulsado la rueda del mousse");
 		else if (e.getModifiersEx()==MouseEvent.BUTTON3_DOWN_MASK)
-			System.out.println("Haz pulsado el botón derecho del mouse");
+			System.out.println("Haz pulsado el botÃ³n derecho del mouse");
 	}
 }

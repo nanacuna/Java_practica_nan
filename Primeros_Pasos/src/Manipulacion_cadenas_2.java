@@ -3,7 +3,7 @@ public class Manipulacion_cadenas_2 {
 
 	public static void main(String[] args) {
 		
-		String frase= "Hoy es un estupendo día para aprender a programar en Java";
+		String frase= "Hoy es un estupendo dÃ­a para aprender a programar en Java";
 		
 		int ult_frase = frase.length();
 		

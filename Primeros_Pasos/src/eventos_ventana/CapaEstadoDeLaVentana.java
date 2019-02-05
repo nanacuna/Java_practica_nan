@@ -8,10 +8,10 @@ public class CapaEstadoDeLaVentana implements WindowStateListener{
 		//System.out.println("La ventana ha cambiado de Estado");
 		//System.out.println(e.getNewState());
 		if (e.getNewState()==Frame.MAXIMIZED_BOTH) 
-			System.out.println("La ventana est· Maximizada");
+			System.out.println("La ventana est√° Maximizada");
 		else if (e.getNewState()==Frame.NORMAL)
-			System.out.println("La ventana est· Normal");
+			System.out.println("La ventana est√° Normal");
 		else if (e.getNewState()==Frame.ICONIFIED)
-			System.out.println("La ventana est· Minimizada");
+			System.out.println("La ventana est√° Minimizada");
 	}
 }

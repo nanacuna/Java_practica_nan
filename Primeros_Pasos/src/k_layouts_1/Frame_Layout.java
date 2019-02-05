@@ -16,7 +16,7 @@ public class Frame_Layout extends JFrame{
 		add (sheet, BorderLayout.NORTH);
 		/*FlowLayout provision = new FlowLayout(FlowLayout.LEFT);
 		sheet.setLayout (provision);*/
-		//Forma abreviada de instanciar la clase y darle posición
+		//Forma abreviada de instanciar la clase y darle posiciÃ³n
 		add (new Panel_Layout2 (), BorderLayout.SOUTH);
 	}
 }

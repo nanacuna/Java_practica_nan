@@ -17,7 +17,7 @@ public class Video23_Condicionantes_10_Matriz {
 		}
 		
 		for (i=0; i<10; i++) {
-				System.out.printf("Posición %d: [%d]\n", i, matriz[i]);
+				System.out.printf("PosiciÃ³n %d: [%d]\n", i, matriz[i]);
 		}
 		
 

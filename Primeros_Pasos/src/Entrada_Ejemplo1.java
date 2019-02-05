@@ -16,7 +16,7 @@ public class Entrada_Ejemplo1 {
 		
 		int edad= entrada.nextInt();
 		
-		System.out.println("Hola "+nombre+". El año que viene tendras "+(edad+1)+ " años.");
+		System.out.println("Hola "+nombre+". El aÃ±o que viene tendrÃ¡s "+(edad+1)+ " aÃ±os.");
 		
 		String nom1="NANCY";
 		

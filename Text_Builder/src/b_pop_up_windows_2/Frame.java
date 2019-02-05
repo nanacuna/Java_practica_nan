@@ -1,4 +1,4 @@
-package a_text_builder_1_8;
+package b_pop_up_windows_2;
 import javax.swing.*;
 import java.awt.*;
 
@@ -9,9 +9,9 @@ public class Frame extends JFrame{
 		int ancho, alto;
 		ancho = dim.width;
 		alto = dim.height;
-		setBounds(ancho/4, alto/4, ancho/2, alto/2+100);
+		setBounds(ancho/4, alto/4, ancho/2, alto/2);
 		//---------------------------------------------------
-		setTitle("Pop Up Main");
+		setTitle("");
 		Image im = resolution.createImage("../Primeros_Pasos/imagenes/blue.png");
 		setIconImage(im);
 		//---------------------------------------------------

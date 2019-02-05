@@ -14,21 +14,21 @@ public class Uso_Empleado {
 		
 		Empleado [] mis_empleados = new Empleado[6];
 		
-		mis_empleados [0] = new Empleado("Nancy Acu�a", 85000, 1990, 12, 17);
+		mis_empleados [0] = new Empleado("Nancy Acuña", 85000, 1990, 12, 17);
 		mis_empleados [1] = new Empleado("Ana Lopez", 95000, 1995, 06, 02);
 		mis_empleados [2] = new Empleado("Maria Perez", 105000, 2002, 03, 15);
-		mis_empleados [3] = new Empleado("Lucas G�mez");
+		mis_empleados [3] = new Empleado("Lucas Gómez");
 		
 		mis_empleados[4] = Jefe_RRHH; //Polimorfismo
 		
-		mis_empleados[5] = new Jefatura ("Juana Suarez", 95000, 2008, 5, 12);
+		mis_empleados[5] = new Jefatura ("Juana Suárez", 95000, 2008, 5, 12);
 		
 		Jefatura Jefe_Finanzas = (Jefatura) mis_empleados[5];
 		
 		Jefe_Finanzas.setIncentive(55000);
 		
 		System.out.println(Jefe_Finanzas.tomarDecisiones(
-				"\ndar m�s d�as de vacaciones a los empleados\n"));
+				"\ndar más días de vacaciones a los empleados\n"));
 		
 		System.out.println("El Jefe: "+Jefe_Finanzas.mostrar_nom()+"\nTiene un bonus de: $"
 		+Jefe_Finanzas.est_bonus(500)+"\n");

@@ -15,6 +15,6 @@ public class EventosDelRaton implements MouseListener {
 		System.out.println("Haz presionado el mousse");
 	}
 	public void mouseReleased (MouseEvent e) {
-		System.out.println("Haz soltado el botón del mousse");
+		System.out.println("Haz soltado el botÃ³n del mousse");
 	}
 }

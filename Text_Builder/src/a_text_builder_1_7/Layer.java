@@ -1,4 +1,4 @@
-package a_text_builder_1_8;
+package a_text_builder_1_7;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.text.*;
@@ -41,7 +41,7 @@ public class Layer extends JPanel {
 	public Layer () {
 		setLayout(new BorderLayout());
 		
-		text.setText("Debe ser que mee pediste un día una canción que fuera del corazón");
+		text.setText("Debe ser que me pediste un dÃ­a una canciÃ³n que fuera del corazÃ³n");
 		text.setBackground(new Color(47, 47, 47));
 		text.setForeground(new Color(220, 220, 220));
 		

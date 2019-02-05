@@ -12,11 +12,11 @@ public class Video22_Condicionantes_9_Factorial {
 		int i=0, num=0, resul=1;
 		
 		
-		System.out.println("Introduzca un número por favor");
+		System.out.println("Introduzca un nÃºmero por favor");
 		
 		num = ent.nextInt();
 		
-		//System.out.println("El número ingresado es: "+num);
+		//System.out.println("El nÃºmero ingresado es: "+num);
 		
 		for (i=1; i<=num; i++) {
 			resul*=i;
@@ -26,7 +26,7 @@ public class Video22_Condicionantes_9_Factorial {
 		
 		long resul=1L, i=0;
 		
-		int num = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un número por favor"));
+		int num = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un nÃºmero por favor"));
 		
 		for (i=num; i>0; i--)
 			resul *=i;

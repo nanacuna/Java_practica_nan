@@ -13,14 +13,14 @@ public class Video23_Uso_Arrays {
 		matriz_nan[4]=71;
 		
 		for (i=0; i<5; i++) {
-			System.out.printf("Posición %d = [%d]", i, matriz_nan[i]);
+			System.out.printf("Posiciï¿½n %d = [%d]", i, matriz_nan[i]);
 		}*/
 		
 		int [] mi_matriz = {15,46,18,19,7,15,47,76,99,66,35,15,69,75, 56, 97, 12,32,14,63};
 		int i=0;
 		
 		for (i=0; i<mi_matriz.length; i++) {
-			System.out.printf("Posición %d = [%d]\n", i, mi_matriz[i]);
+			System.out.printf("PosiciÃ³n %d = [%d]\n", i, mi_matriz[i]);
 		}
 		
 		

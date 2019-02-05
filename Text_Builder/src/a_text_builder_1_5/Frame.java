@@ -11,7 +11,7 @@ public class Frame extends JFrame{
 		alto = dim.height;
 		setBounds(ancho/4, alto/4, ancho/2, alto/2);
 		//---------------------------------------------------
-		setTitle("Pop Up Main");
+		setTitle("Atajos del Teclado");
 		Image im = resolution.createImage("../Primeros_Pasos/imagenes/blue.png");
 		setIconImage(im);
 		//---------------------------------------------------

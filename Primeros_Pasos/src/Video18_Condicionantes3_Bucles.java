@@ -6,11 +6,11 @@ public class Video18_Condicionantes3_Bucles {
 		String clave = "nancy", pass = " ";
 		
 		while (clave.equals(pass) == false) {
-			pass = JOptionPane.showInputDialog ("Ingresa la contraseña por favor");
+			pass = JOptionPane.showInputDialog ("Ingresa la contraseÃ±a por favor");
 			
 			if (clave.equals(pass) == false)
-				System.out.println("Contraseña incorrecta");
+				System.out.println("ContraseÃ±a incorrecta");
 		}
-		System.out.println("Contraseña correcta\nAcceso permitido");
+		System.out.println("ContraseÃ±a correcta\nAcceso permitido");
 	}
 }

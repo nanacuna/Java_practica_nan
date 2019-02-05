@@ -13,14 +13,14 @@ public class Video18_Condicionales_5_Random {
 		int num=0, cont=0;
 		
 		do {
-			System.out.println("Ingrese un número por favor");
+			System.out.println("Ingrese un nÃºmero por favor");
 			
 			num = ent.nextInt();
 			
 			if (aux < num)
-				System.out.println("Más bajo");
+				System.out.println("MÃ¡s bajo");
 			else if (aux > num)
-				System.out.println("Más alto");
+				System.out.println("MÃ¡s alto");
 			
 			cont++;
 		}while (aux != num);

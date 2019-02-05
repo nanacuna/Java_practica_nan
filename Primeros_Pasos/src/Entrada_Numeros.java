@@ -7,11 +7,11 @@ public class Entrada_Numeros {
 		//double x=10000.0;
 		//System.out.printf("%.2f", x/3);
 		
-		String num1 = JOptionPane.showInputDialog("Introduce un número: ");
+		String num1 = JOptionPane.showInputDialog("Introduce un nÃºmero: ");
 		
 		double num2 = Double.parseDouble(num1);
 		
-		System.out.printf("La raíz cuadrada de %.0f", num2);
+		System.out.printf("La raÃ­z cuadrada de %.0f", num2);
 		
 		System.out.printf(" es %.2f", Math.sqrt(num2));
 	}

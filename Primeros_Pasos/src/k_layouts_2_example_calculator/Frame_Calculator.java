@@ -13,11 +13,11 @@ public class Frame_Calculator extends JFrame{
 		Image im = resolucion.getImage("imagenes/red.png");
 		setIconImage (im);
 		setTitle ("Calculator");
-		//Instancio la primer l·mina
+		//Instancio la primer l√°mina
 		Sheet_Calculator1 sheet1 = new Sheet_Calculator1 ();
-		//Agrego la primer l·mina
+		//Agrego la primer l√°mina
 		add (sheet1, BorderLayout.NORTH);
-		//Le  doy color de fondo a la primer l·mina
+		//Le  doy color de fondo a la primer l√°mina
 		sheet1.setBackground(SystemColor.window);
 	}
 }

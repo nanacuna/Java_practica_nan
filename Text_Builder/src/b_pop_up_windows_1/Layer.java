@@ -1,4 +1,4 @@
-package a_text_builder_1_6;
+package b_pop_up_windows_1;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.text.*;
@@ -8,10 +8,11 @@ import javax.swing.plaf.basic.BasicBorders.RadioButtonBorder;
 import java.awt.event.*;
 
 public class Layer extends JPanel {
-	private ButtonGroup  group_size = new ButtonGroup();
 	private JPanel layer_menu = new JPanel();
-	private JMenuBar my_menu = new JMenuBar();
-		private JMenu source = new JMenu("Source");
+	private JMenuBar menu_bar = new JMenuBar();
+		private JMenu menu_font = new JMenu("Fonts");
+			private JMenuItem font_arial = new JMenuItem("Arial");
+		
 		private JMenu style = new JMenu("Style");
 			private JCheckBoxMenuItem bold = new JCheckBoxMenuItem("Bold", new ImageIcon ("assets/theme/bold.png"));
 			private JCheckBoxMenuItem italic = new JCheckBoxMenuItem("Italic", new ImageIcon("assets/theme/italic.png"));
@@ -20,28 +21,25 @@ public class Layer extends JPanel {
 			private JRadioButtonMenuItem size_2 = new JRadioButtonMenuItem("16");
 			private JRadioButtonMenuItem size_3 = new JRadioButtonMenuItem("20");
 			private JRadioButtonMenuItem size_4 = new JRadioButtonMenuItem("24");
-	//-----------------------------------------------
 	private JPopupMenu options = new JPopupMenu();
-	private JMenuItem bold_emergent = new JMenuItem("Negrita");
-	private JMenuItem italic_emergent = new JMenuItem("Italic");
+		private JMenuItem bold_emergent = new JMenuItem("Negrita");
+		private JMenuItem italic_emergent = new JMenuItem("Italic");
+	//-------------------------------------------------------------------------------------------------------------------
 	private JTextPane text = new JTextPane();
 	private Font letters;
+	private ButtonGroup  group_size = new ButtonGroup();
 	public Layer () {
 		setLayout(new BorderLayout());
-		my_menu.add(source);
-			elements_menu("Arial", "Source", "Arial", "");
-			elements_menu("Courier", "Source", "Courier", "");
-			elements_menu("Verdana", "Source", "Verdana", "");
-			//----------------------------------
-		my_menu.add(style);
+		menu_bar.add(menu_font);
+			menu_font.add(font_arial);
+			//-----------------------------------------------------------------------------------------------------------
+		menu_bar.add(style);
 			bold.addActionListener(new StyledEditorKit.BoldAction());
 			italic.addActionListener(new StyledEditorKit.ItalicAction());
 			style.add(bold);
 			style.add(italic);
-			bold.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_B, InputEvent.CTRL_DOWN_MASK));
-			italic.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_K, InputEvent.CTRL_DOWN_MASK));
-			//-----------------------------------------
-		my_menu.add(size_letter);
+			//-----------------------------------------------------------------------------------------------------------
+		menu_bar.add(size_letter);
 			group_size.add(size_1);
 			group_size.add(size_2);
 			group_size.add(size_3);
@@ -54,28 +52,15 @@ public class Layer extends JPanel {
 			size_letter.add(size_2);
 			size_letter.add(size_3);
 			size_letter.add(size_4);
-			size_4.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_D, InputEvent.CTRL_DOWN_MASK));
-			//-------------------------------------------
-		layer_menu.add(my_menu);
+			//-----------------------------------------------------------------------------------------------------------
+		layer_menu.add(menu_bar);
 		add(layer_menu, BorderLayout.NORTH);
 		add(text, BorderLayout.CENTER);
-		//------------------------------------
+		//---------------------------------------------------------------------------------------------------------------
 		options.add(bold_emergent);
 		options.add(italic_emergent);
 		bold_emergent.addActionListener(new StyledEditorKit.BoldAction());
 		italic_emergent.addActionListener(new StyledEditorKit.ItalicAction());
 		text.setComponentPopupMenu(options);
-	}
-	public void elements_menu(String label, String menu, String type_letter, String icono){
-		JMenuItem source_menu = new JMenuItem(label, new ImageIcon(icono));
-		if (menu.equals("Source")) {
-			source.add(source_menu);
-			if(type_letter.equals("Arial"))
-				source_menu.addActionListener(new StyledEditorKit.FontFamilyAction("Cambiar letra", "Arial"));
-			else if (type_letter.equals("Courier"))
-				source_menu.addActionListener(new StyledEditorKit.FontFamilyAction("Cambiar letra", "Courier"));
-			else
-				source_menu.addActionListener(new StyledEditorKit.FontFamilyAction("Cambiar letra", "Verdana"));
-		}
 	}
 }

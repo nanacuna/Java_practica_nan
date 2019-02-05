@@ -9,7 +9,7 @@ public class Alumno extends Humano {
 	}
 	
 	public String Description(){
-		return "Este alumno está estudiando la carrera de: "+Carrera;
+		return "Este alumno estÃ¡ estudiando la carrera de: "+Carrera;
 	}
 	
 	private String Carrera;

@@ -6,11 +6,11 @@ public class Video20_Condicionantes_6 {
 		String gen = " ";
 		
 		do {
-			gen = JOptionPane.showInputDialog ("Introduce tu género: \nHombre\nMujer");
+			gen = JOptionPane.showInputDialog ("Introduce tu gÃ©nero: \nHombre\nMujer");
 		
 		}while(gen.equalsIgnoreCase ("Hombre")==false && gen.equalsIgnoreCase("Mujer")==false);
 		
-		int alt = Integer.parseInt(JOptionPane.showInputDialog("Introduce tu altra en centímetros"));
+		int alt = Integer.parseInt(JOptionPane.showInputDialog("Introduce tu altra en centÃ­metros"));
 		
 		int peso_ideal=0;
 		
@@ -20,7 +20,7 @@ public class Video20_Condicionantes_6 {
 			peso_ideal = alt-120;
 		
 		
-		System.out.println("Tú peso ideal es: " +peso_ideal + " kg");
+		System.out.println("TÃº peso ideal es: " +peso_ideal + " kg");
 	}
 
 }

@@ -11,7 +11,7 @@ public class MarcoVentana extends JFrame {
 		setVisible (true);
 		//Establezco que hacer cuando se cierra la ventana
 		setDefaultCloseOperation (DISPOSE_ON_CLOSE);
-		//Creo un marco seg�n la resolucion del monitor.
+		//Creo un marco según la resolución del monitor.
 		Toolkit resolucion = Toolkit.getDefaultToolkit();
 		//Establezco las dimensiones
 		Dimension dim = resolucion.getScreenSize();
@@ -20,7 +20,7 @@ public class MarcoVentana extends JFrame {
 		ancho = dim.width;
 		alto = dim.height;
 		//Con las variables establezco los puntos de inicio
-		//y de localizacion de la ventana.
+		//y de localización de la ventana.
 		setBounds (ancho/4, alto/4, ancho/2, alto/2);
 	}
 }

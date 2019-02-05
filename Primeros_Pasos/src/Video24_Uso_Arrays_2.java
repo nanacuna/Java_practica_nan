@@ -11,26 +11,26 @@ public class Video24_Uso_Arrays_2 {
 		int i=0;
 		
 		/*paises[0] = "Argentina";
-		paises[1] = "México";
+		paises[1] = "MÃ©xico";
 		paises[2] = "Colombia";
-		paises[3] = "Perú";
+		paises[3] = "PerÃº";
 		paises[4] = "Chile";
-		paises[5] = "España";
+		paises[5] = "EspaÃ±a";
 		paises[6] = "Ecuador";
 		paises[7] = "Venezuela";*/
 		
 		/*for (i=0; i<paises.length; i++) {
-			System.out.println("País " + (i+1) +": " + paises[i]);
+			System.out.println("PaÃ­s " + (i+1) +": " + paises[i]);
 		}*/
 		
 		/*for (i=0; i<paises.length; i++) {
-			paises[i] = JOptionPane.showInputDialog("Introduce el país " + (i+1));
+			paises[i] = JOptionPane.showInputDialog("Introduce el paÃ­s " + (i+1));
 		}*/
 		
 		//Bucle FOR EACH
 		/*for (String elemento: paises) {
 			i++;
-			System.out.printf("País %d: %s\n", i, elemento);
+			System.out.printf("PaÃ­s %d: %s\n", i, elemento);
 			
 		}*/
 		
@@ -42,7 +42,7 @@ public class Video24_Uso_Arrays_2 {
 		
 		for (int elem: num) {
 			i++;
-			System.out.printf("Posición %d: número = %d\n", i, elem);
+			System.out.printf("PosiciÃ³n %d: nÃºmero = %d\n", i, elem);
 		}
 		
 	}

@@ -12,7 +12,7 @@ public class Ventana extends JFrame{
 		JButton btn = new JButton("btn");
 		add(btn);
 		
-		btn.addActionListener( new Mi_accion("Agustin"));
+		btn.addActionListener( new Mi_accion("Agustín"));
 		
 		
 		setBounds(100,100,800,600);

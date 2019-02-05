@@ -11,10 +11,10 @@ public class Coche {
 	boolean asientos_cuero, aire_acond;
 	
 	
-	/*Método constructor: es un método que se encarga 
+	/*MÃ©todo constructor: es un mÃ©todo que se encarga 
 	  de dar un estado inicial a nuestro objeto*/
 	
-	//Método constructor
+	//MÃ©todo constructor
 	public Coche() {
 		ruedas = 4;
 		largo = 2000;
@@ -26,13 +26,13 @@ public class Coche {
 	
 	public String mostrar_datos_generales() {
 		return "La plataforma de mi auto tiene "+ruedas+" ruedas.\nMide "+largo/1000
-				+ " metros con un ancho de "+ancho+" cm³ y un peso de "+
+				+ " metros con un ancho de "+ancho+" cmÂ² y un peso de "+
 				peso_plataforma+ " kg.\nSu motor pesa "+motor+" kg.";
 	}
 	//Modificadores de acceso : "public"
-	public String mostrar_largo() {//método GETTER
+	public String mostrar_largo() {//mï¿½todo GETTER
 		
-		return "El largo del auto es "+largo + " cm³";
+		return "El largo del auto es "+largo + " cmÂ²";
 	}
 	
 	public String mostrar_ruedas () {
@@ -40,7 +40,7 @@ public class Coche {
 	}
 	
 	public String mostrar_ancho () {
-		return "El auto mide "+ancho+" cm³ de ancho";
+		return "El auto mide "+ancho+" cmÂ² de ancho";
 	}
 	
 	public String mostrar_motor () {
@@ -54,7 +54,7 @@ public class Coche {
 	
 	///////////////////////////////////////////////////////////
 	
-	public void colores(String color) {//método SETTER
+	public void colores(String color) {//mï¿½todo SETTER
 		this.color = color;
 	}
 	public String mostrar_color() {

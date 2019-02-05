@@ -14,14 +14,14 @@ public class Video19_Condicionantes_4 {
 		
 		while (num != aleat) {
 			intentos++;
-			System.out.println ("Introduce un número por favor");
+			System.out.println ("Introduce un nÃºmero por favor");
 			
 			num = ent.nextInt();
 			
 			if (aleat < num)
-				System.out.println("Más bajo");
+				System.out.println("MÃ¡s bajo");
 			else if (aleat > num)
-				System.out.println("Más alto");			
+				System.out.println("MÃ¡s alto");			
 		}
 		
 		System.out.println("Correcto. Lo has conseguido en " +intentos +" intentos");

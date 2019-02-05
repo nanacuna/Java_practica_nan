@@ -22,7 +22,7 @@ public class Video16_Condicionales1 {
 			System.out.println("Eres maduro");
 		}
 		else {
-			System.out.println("Cuídate");
+			System.out.println("CuÃ­date");
 		}
 	}
 

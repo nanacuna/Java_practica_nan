@@ -15,14 +15,14 @@ public class Multiple_Events extends JPanel {
 		////////////////////////////////////////////////////////////////////////////////////////////////////////
 		///////////////CLASE 1: MAPA DE ENTRADA/////////////////////////////////////
 		InputMap EntryMap = getInputMap (WHEN_IN_FOCUSED_WINDOW);
-		//////////////CLASE 2: COMBINACIÓN DE TECLAS/////////////////////////////////////
+		//////////////CLASE 2: COMBINACIï¿½N DE TECLAS/////////////////////////////////////
 		//KeyStroke KeyRed = KeyStroke.getKeyStroke("ctrl R");
-		/////////////CLASE 3: AGREGA VÍNCULO ENTRE  LA COMMBINACIÓN DE TECLAS Y LA ACCIÓN/////////////////////////////////////
+		/////////////CLASE 3: AGREGA Vï¿½NCULO ENTRE  LA COMMBINACIï¿½N DE TECLAS Y LA ACCIï¿½N/////////////////////////////////////
 		EntryMap.put(KeyStroke.getKeyStroke("ctrl R"), "Background Red");
 		EntryMap.put(KeyStroke.getKeyStroke("ctrl G"), "Background Green");
 		EntryMap.put(KeyStroke.getKeyStroke("ctrl B"), "Background Blue");
-		/////////////CLASE 4: CREA MAPA DE ACCIÓN PARA  LUEGO USAR EL  MÉTODO "PUT" QUEE CREA EL VÍNCULO
-		/////////////ENTRE EL OBJETO CREADO Y LA ACCIÓN EN SÍ MISMA///////////////////////////////////////////////
+		/////////////CLASE 4: CREA MAPA DE ACCIï¿½N PARA  LUEGO USAR EL  Mï¿½TODO "PUT" QUEE CREA EL Vï¿½NCULO
+		/////////////ENTRE EL OBJETO CREADO Y LA ACCIï¿½N EN Sï¿½ MISMA///////////////////////////////////////////////
 		ActionMap  Map = getActionMap();
 		Map.put("Background Red", action_red);
 		Map.put("Background Green", action_green);
@@ -40,8 +40,7 @@ public class Multiple_Events extends JPanel {
 			Color c = (Color) getValue("Background_color ");
 			setBackground (c);
 			System.out.println("Nombre: "+getValue(Action.NAME)
-			+ "\nDescripción: "+getValue(Action.SHORT_DESCRIPTION));
+			+ "\nDescripciÃ³n: "+getValue(Action.SHORT_DESCRIPTION));
 		}
 	}
-	///////Falta terminar!!!!!!!!!!!!!!!!!!!!!!!!!
 }

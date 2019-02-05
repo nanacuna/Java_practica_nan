@@ -6,7 +6,7 @@ public class Variables {
 		byte edad=26;
 		float precio=3.2f;
 		
-		System.out.println("Tengo "+edad+" años");
+		System.out.println("Tengo "+edad+" aÃ±os");
 		
 		edad=28;
 		
